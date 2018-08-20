@@ -6,14 +6,13 @@ describe ('some tests', () => {
         browser.pause(20000);
         expect(browser.getText('#sign_in')[0]).toEqual('Sign In');
         expect(browser.getText('#create_account')[0]).toEqual('Create Account');
-        browser.click('#sign_in');
+        browser.click(('#sign_in')[0]);
     });
 
-    it(' should open log in page and logging in', () => {
+    it(' should open login page and make login', () => {
         browser.pause(20000);
         expect(browser.getText('#title')).toEqual('USER LOGIN');
         browser.setValue('#username', 'elenapogudo@protonmail.com');
-        browser.pause(5000);
         browser.setValue('#password', '123456789');
         browser.hideDeviceKeyboard();
         browser.click('#sign_in');
