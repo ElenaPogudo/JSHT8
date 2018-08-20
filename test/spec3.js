@@ -4,7 +4,7 @@ describe ('some tests', () => {
 
     it(' should have sign in and create account buttons on the tart screen', () => {
         browser.pause(20000);
-        expect(browser.getText('#sign_in'))[0].toEqual('Sign In');
+        expect(browser.getText('#sign_in')[0]).toEqual('Sign In');
         expect(browser.getText('#create_account')[0]).toEqual('Create Account');
         browser.click('#sign_in');
     });
